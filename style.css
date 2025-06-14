@@ -38,7 +38,7 @@ nav {
     align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #005994;
 }
 
 .nav-links {
@@ -55,7 +55,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: #005994;
 }
 
 .auth-buttons {
@@ -85,18 +85,18 @@ nav {
 
 .btn-secondary {
     background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #005994;
+    border: 2px solid #005994;
 }
 
 .btn-secondary:hover {
-    background: #2563eb;
+    background: #005994;
     color: white;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #005994 0%, #764ba2 100%);
     color: white;
     padding: 120px 0 80px;
     text-align: center;
@@ -171,7 +171,7 @@ nav {
 .section-header h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1f2937;
+    color: #005994;
 }
 
 .section-header p {
@@ -202,7 +202,7 @@ nav {
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #2563eb;
+    color: #005994;
 }
 
 /* Platforms Section */
@@ -239,10 +239,10 @@ nav {
     text-align: center;
 }
 
-.stat-item h3 {
+.stats .stat-item h3 {
     font-size: 3rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #005994;
 }
 
 /* Solutions Section */
@@ -295,7 +295,7 @@ nav {
 }
 
 .pricing-intro {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #005994 0%, #764ba2 100%);
     color: white;
     padding: 3rem;
     border-radius: 12px;
@@ -321,7 +321,7 @@ nav {
 
 .pricing-card:hover {
     transform: translateY(-5px);
-    border-color: #2563eb;
+    border-color: #005994;
 }
 
 .pricing-card.featured {
@@ -345,7 +345,7 @@ nav {
 .price {
     font-size: 3rem;
     font-weight: bold;
-    color: #2563eb;
+    color: #005994;
 }
 
 .price-period {
@@ -489,6 +489,118 @@ footer {
     color: white;
     padding: 2rem 0;
     text-align: center;
+}
+.footer-link {
+    color: #fbbf24;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-item h3 {
+    color: #fbbf24;
+    font-size: 1.125rem;
+}
+.footer-item ul li {
+    margin-bottom: 0.5rem;
+}
+.footer-social h3 {
+    color: #fbbf24;
+    font-size: 1.125rem;
+}
+.footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #9ca3af;
+}
+
+/* Utility and custom classes for Social Partner plans */
+.brand-blue-bg {
+    background: linear-gradient(135deg, #005994 0%, #005994 100%);
+}
+.brand-red-60 {
+    background: #dc2626;
+}
+.text-white {
+    color: #fff !important;
+}
+.text-gray-200 {
+    color: #e5e7eb !important;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.5rem;
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 0.75rem;
+}
+.w-full {
+    width: 100%;
+}
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+.font-semibold {
+    font-weight: 600;
+}
+.hover\:opacity-80:hover {
+    opacity: 0.8;
+}
+.transition-opacity {
+    transition: opacity 0.2s;
+}
+.text-sm {
+    font-size: 0.875rem;
+}
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+.mb-8 {
+    margin-bottom: 2rem;
+}
+.grid {
+    display: grid;
+}
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+.md\:grid-cols-3 {
+    /* For demonstration, always 3 columns on desktop, 1 on mobile */
+}
+@media (min-width: 768px) {
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.gap-8 {
+    gap: 2rem;
+}
+.relative {
+    position: relative;
+}
+.text-center {
+    text-align: center;
+}
+.text-2xl {
+    font-size: 1.5rem;
+}
+.text-4xl {
+    font-size: 2.25rem;
+}
+.p-6 {
+    padding: 1.5rem;
 }
 
 /* Responsive Design */

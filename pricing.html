@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediaManagerPro - Pricing Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #ffffff;
+        }
+
+        .main-title {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #005994;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #005994;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #005994;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pricing-card {
+            background: #005994;
+            border-radius: 15px;
+            padding: 40px 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 89, 148, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: white;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 89, 148, 0.2);
+        }
+
+        .plan-badge {
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .badge-starter {
+            background-color: #005994;
+        }
+
+        .badge-best {
+            background-color: rgba(215, 47, 58, 0.6);
+            animation: pulse 2s infinite;
+        }
+
+        .badge-pro {
+            background-color: #005994;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
+        .plan-name {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 3em;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .plan-period {
+            font-size: 1.1em;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .plan-ideal {
+            font-size: 1em;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .plan-features li {
+            padding: 8px 0;
+            color: white;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #a1d9dd;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .btn-primary {
+            background-color: rgba(215, 47, 58, 0.6);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: rgba(215, 47, 58, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .btn-trial {
+            background-color: rgba(215, 47, 58, 0.6);
+            color: white;
+        }
+
+        .btn-trial:hover {
+            background-color: rgba(215, 47, 58, 0.8);
+            transform: translateY(-2px);
+        }
+
+        /* Video Section */
+        .video-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 15px;
+        }
+
+        .video-link {
+            color: #005994;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .video-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Charitable Section */
+        .charitable-section {
+            background-color: #a1d9dd;
+            padding: 50px 0;
+            margin-top: 60px;
+        }
+
+        .charitable-section .section-title {
+            color: #005994;
+        }
+
+        .charitable-section .section-description {
+            color: #333;
+        }
+
+        .discount-highlight {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #005994;
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 89, 148, 0.1);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+
+        .cta-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #005994;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .cta-buttons .btn {
+            width: auto;
+            min-width: 200px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.8em;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .pricing-card {
+                padding: 30px 20px;
+            }
+
+            .plan-price {
+                font-size: 2.5em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .main-title {
+                font-size: 1.8em;
+            }
+
+            .section-title {
+                font-size: 1.6em;
+            }
+
+            .pricing-card {
+                padding: 25px 15px;
+            }
+
+            .plan-price {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="main-title">
+                MediaManagerPro<br>
+                Pricing plans
+            </h1>
+            <p class="subtitle">A perfect solution for solopreneurs, SMEs, and non-profits wanting social visibility</p>
+            <p class="description">Our flexible pricing plans are designed to fit your unique social marketing needs and budget. MediaManagerPro is probably the most comprehensive social marketing platform available.</p>
+        </div>
+    </header>
+
+    <!-- DIY Plans Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">DIY plans</h2>
+            <h3 class="section-subtitle">Starter, Essential, & Professional</h3>
+            <p class="section-description">
+                Your team manages the MediaManagerPro platform and the amazing in-built features. They use the onboard AI writer to create as much personalised content as you need or import your own. They schedule your posts when and where you want them. Full on-board video training is available.
+            </p>
+
+            <div class="video-section">
+                <p>We will include our "Social Media Growth System" free of charge. <a href="https://youtu.be/nXgfrQLC2_s" class="video-link" target="_blank">Take a look here</a></p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- DIY Starter Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-starter">A great starter</div>
+                    <h3 class="plan-name">DIY Starter plan</h3>
+                    <div class="plan-price">£49</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-ideal">Ideal for: Solopreneurs and SMEs</div>
+                    <ul class="plan-features">
+                        <li>MediaManagerPro - Social Media Publishing System</li>
+                        <li>Up to 2 user accounts</li>
+                        <li>Up to 10 social connections</li>
+                        <li>Up to 100 campaign entries</li>
+                        <li>Built-in AI writer / Viral campaign, photo competition, and testimonial templates</li>
+                        <li>Advanced analytics</li>
+                        <li>Up to 3 x RSS feed automated posting</li>
+                        <li>Calendar / Auto scheduler</li>
+                        <li>Automatic reposting queues</li>
+                        <li>Unlimited email support only</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+
+                <!-- DIY Essential Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-best">Best buy</div>
+                    <h3 class="plan-name">DIY Essential plan</h3>
+                    <div class="plan-price">£149</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-ideal">Ideal for: Solopreneurs and SMEs seriously looking to establish their social media presence</div>
+                    <ul class="plan-features">
+                        <li>MediaManagerPro - Social Media Publishing System</li>
+                        <li>Up to 8 user accounts</li>
+                        <li>Up to 20 social connections</li>
+                        <li>Up to 400 campaign entries</li>
+                        <li>Built-in AI writer / Viral campaign, photo competition, and testimonial templates</li>
+                        <li>Advanced analytics</li>
+                        <li>Up to 3 x RSS feed automated posting</li>
+                        <li>Calendar / Auto scheduler</li>
+                        <li>Automatic reposting queues</li>
+                        <li>Unlimited email support with 24-hour response</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+
+                <!-- DIY Professional Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-pro">Super pro</div>
+                    <h3 class="plan-name">DIY Professional plan</h3>
+                    <div class="plan-price">£197</div>
+                    <div class="plan-period">per month</div>
+                    <div class="plan-ideal">Ideal for: Solopreneurs, SMEs and creative agencies seriously looking to establish their social media presence and or manage social for clients</div>
+                    <ul class="plan-features">
+                        <li>MediaManagerPro - Social Media Publishing System</li>
+                        <li>Up to 30 user accounts</li>
+                        <li>Up to 60 social connections</li>
+                        <li>Up to 5000 campaign entries</li>
+                        <li>Built-in AI writer / Viral campaign, photo competition, and testimonial templates</li>
+                        <li>Advanced analytics</li>
+                        <li>Up to 20 x RSS feed automated posting</li>
+                        <li>Calendar / Auto scheduler</li>
+                        <li>Automatic reposting queues</li>
+                        <li>Priority email + phone support during business hours</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Partner Plans Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Social partner plans</h2>
+            <h3 class="section-subtitle">Starter, Essential, & Professional</h3>
+            <p class="section-description">
+                Relax, we've got you covered. Let our creative team create eye-catching and attention-grabbing content, schedule your monthly posts, and manage your viral marketing campaigns for you.
+            </p>
+
+            <div class="video-section">
+                <p>We will include our "Social Media Growth System" free of charge. <a href="https://youtu.be/nXgfrQLC2_s" class="video-link" target="_blank">Take a look here</a></p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Social Partner Starter Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-starter">A great starter</div>
+                    <h3 class="plan-name">Starter plan +</h3>
+                    <div class="plan-price">£247</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>All of DIY Starter plan</li>
+                        <li>1 shareable campaign created for you</li>
+                        <li>Up to 5 social posts created for you per week for each of your social platforms</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+
+                <!-- Social Partner Essential Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-best">Best buy</div>
+                    <h3 class="plan-name">Essential plan +</h3>
+                    <div class="plan-price">£397</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>All of DIY Essential plan</li>
+                        <li>Up to 2 shareable campaigns created for you</li>
+                        <li>Up to 7 social posts created for you per week for each of your social platforms</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+
+                <!-- Social Partner Professional Plan -->
+                <div class="pricing-card">
+                    <div class="plan-badge badge-pro">Super pro</div>
+                    <h3 class="plan-name">Professional +</h3>
+                    <div class="plan-price">£597</div>
+                    <div class="plan-period">per month</div>
+                    <ul class="plan-features">
+                        <li>All of DIY Professional plan</li>
+                        <li>Up to 5 shareable campaigns created for you</li>
+                        <li>Up to 10 social posts created for you per week for each of your social platforms</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                    <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Charitable Section -->
+    <section class="charitable-section">
+        <div class="container">
+            <h2 class="section-title">Special charitable & non-profit pricing</h2>
+            <p class="section-description">
+                Special discount applies to all "DIY - Starter, Essential & Professional plans" and "Social Partner – Starter plan +, Essential plan + & Professional plan +" (less 30%) of monthly plans. N.B. Must be a registered UK charity or non-profit.
+            </p>
+            <div class="discount-highlight">
+                30% discount on all plans for registered UK charities and non-profits
+            </div>
+            <div class="video-section">
+                <p>We will include our "Social Media Growth System" free of charge. <a href="https://youtu.be/nXgfrQLC2_s" class="video-link" target="_blank">Take a look here</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                Ready to transform<br>
+                your social media presence?
+            </h2>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-trial">Take a 7-day free trial</a>
+                <a href="#" class="btn btn-trial">Contact sales</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

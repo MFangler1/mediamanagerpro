@@ -86,6 +86,7 @@ nav {
 .btn-secondary {
     background: transparent;
     color: #005994;
+    background: white;
     border: 2px solid #005994;
 }
 
@@ -481,6 +482,14 @@ nav {
     margin-top: 2rem;
     font-size: 0.9rem;
     opacity: 0.9;
+}
+
+.social-links {
+    text-align: center;
+      margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f3f4f6;
+  border-radius: 10px;
 }
 
 /* Footer */

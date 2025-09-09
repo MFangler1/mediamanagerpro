@@ -1,21 +1,18 @@
 # wrangler.toml for Cloudflare Pages
 
 name = "mediamanagerpro"
-type = "javascript"  # or "rust", "webpack", etc. depending on your project
+type = "javascript"
 account_id = "535f3e26d64d48e5e93b795cb4f7a7e4"
-workers_dev = true  # set to true if deploying to Cloudflare Workers
-compatibility_date = "2025-09-09"  # current date or future date when your project should be live
+workers_dev = true
+compatibility_date = "2025-09-09"
+main = "dist/index.js"
 
 [build]
-command = "npm run build"  # or your build command like "yarn build" or "npm run prod"
-directory = "dist"  # or the directory where your build output is stored, like 'build', 'out', etc.
+command = "npm run build"
+directory = "dist"
 
 [env.production]
 # Specify any environment variables for production here, if needed
-# For example:
-#  - CF_PAGES_URL="your-production-url"
 
 [env.dev]
 # Specify any environment variables for dev environment here
-# For example:
-#  - CF_PAGES_URL="your-dev-url"

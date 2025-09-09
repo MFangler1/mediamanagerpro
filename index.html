@@ -12,8 +12,14 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <span>📊 MediaManagerPro</span>
+                <span>
+                    <img src="images/multimedia.png" alt="MediaManagerPro Logo" style="height: 30px; vertical-align: middle; margin-right: 0.5rem;">
+                    MediaManagerPro
+                </span>
             </div>
+            <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#platforms">Platforms</a></li>
@@ -21,10 +27,12 @@
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="auth-buttons">
+            <!--
+            <div class="auth-buttons" style="display: none;"></div>
                 <a href="#" class="btn btn-secondary">Sign In</a>
                 <a href="#" class="btn btn-primary">Free Trial</a>
             </div>
+            -->
         </nav>
     </header>
 
@@ -33,6 +41,9 @@
         <div class="container">
             <div class="trust-badge">
                 ✓ Trusted by 10,000+ businesses worldwide
+            </div>
+            <div style="display: flex; justify-content: center;">
+                <img src="images/whitelogo.png" alt="MediaManagerPro Logo" style="height: 150px; margin: 1rem 0;">
             </div>
             <h1>
                 Comprehensive<br>
@@ -43,11 +54,11 @@
                 Manage all your social platforms from one powerful dashboard. Create engaging content, schedule posts, and grow your audience across Facebook, LinkedIn, Bluesky, X, Pinterest, Tumblr, TikTok, Google My Business, and more.
             </p>
             
-            <div class="feature-list">
-                <div class="feature-item">AI-powered content creation</div>
-                <div class="feature-item">Multi-platform scheduling</div>
-                <div class="feature-item">Advanced analytics & insights</div>
-                <div class="feature-item">Team collaboration tools</div>
+            <div class="feature-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 2rem 0;">
+                <div class="feature-item" style="text-align: center;">AI-powered content creation</div>
+                <div class="feature-item" style="text-align: center;">Multi-platform scheduling</div>
+                <div class="feature-item" style="text-align: center;">Advanced analytics & insights</div>
+                <div class="feature-item" style="text-align: center;">Team collaboration tools</div>
             </div>
 
             <div style="margin: 2rem 0;">
@@ -573,5 +584,17 @@
             </div>
         </div>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', function() {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('active');
+    });
+});
+</script>
 </body>
 </html>
